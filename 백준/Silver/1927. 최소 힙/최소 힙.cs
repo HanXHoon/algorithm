@@ -16,14 +16,10 @@ namespace ConsoleApp1
                 int readData = Convert.ToInt32(Console.ReadLine());
                 if(readData == 0)
                 {
-                    int dequeueData = 0, dequeuePriority = 0;
-                    bool dequeueResult = false;
-
-                    dequeueResult = pq.TryDequeue(out dequeueData, out dequeuePriority);
-                    if (!dequeueResult)                    
+                    if (pq.Count > 0)
+                        resultSB.AppendLine(pq.Dequeue().ToString());
+                    else
                         resultSB.AppendLine("0");
-                    else                    
-                        resultSB.AppendLine(dequeueData.ToString());
                 }
                 else
                 {
