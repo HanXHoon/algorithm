@@ -1,0 +1,1 @@
+Console.WriteLine((int)Math.Sqrt(Convert.ToInt32(Console.ReadLine())));
